@@ -555,13 +555,6 @@ title TicTacToe game
         timeout /t 1 /nobreak > nul
         call :settingsInt
         goto settings
-::   ) else if "%idS%"=="3" (
-::       if "%speedMode%"=="off" (
-::           set "speedMode=on"
-::       ) else (
-::           set "speedMode=off"
-::       ) 
-::       goto settings
     ) else if "%idS%"=="3" (
         set /a color+= 1
         if %color% EQU 9 (
