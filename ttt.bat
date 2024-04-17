@@ -19,11 +19,11 @@ title TicTacToe game
     call :settingsInt
     color 0%color%
     cls
-    type menu.txt
+    type graphics\menu.txt
     set /p idM=Enter number from menu:
     if "%idM%"=="1" (
         cls
-        type instructions.txt
+        type graphics\instructions.txt
     ) else if "%idM%"=="2" (
         cls
         goto StartGame
@@ -32,7 +32,7 @@ title TicTacToe game
         goto settings
     ) else if "%idM%"=="4" (
         cls
-        type aboutus.txt
+        type graphics\aboutus.txt
     ) else (
         echo "Number is invalid, try again!"
         pause
@@ -42,7 +42,7 @@ title TicTacToe game
 
 :StartGame 
     cls
-    type tttSelectGameMode.txt
+    type graphics\tttSelectGameMode.txt
     set /p ScndPlayerIs=Enter 1 to play with PC and 2 to play with another player:
     if "%ScndPlayerIs%"=="1" (
         cls
@@ -345,7 +345,7 @@ title TicTacToe game
     call :displayBoard
     EXIT /B
 :displayBoard
-    type tttBoard.txt
+    type graphics\tttBoard.txt
     echo 		        #         #
     echo .		   %box1%    #    %box2%    #    %box3%
     echo 		        #         #
@@ -518,13 +518,13 @@ title TicTacToe game
 
 :settings
     color 0%color%
-    del settingsInt.txt
+    del settings\settingsInt.txt
 
-    echo botDificulty=%botDificulty% >> settingsInt.txt
-    echo speedMode=%speedMode%>> settingsInt.txt
-    echo color=%color% >> settingsInt.txt
+    echo botDificulty=%botDificulty% >> settings\settingsInt.txt
+    echo speedMode=%speedMode%>> settings\settingsInt.txt
+    echo color=%color% >> settings\settingsInt.txt
     cls
-    type settings.txt
+    type graphics\settings.txt
     echo    1... Bot difficulty    [ %botDificulty% /2 ]
     echo    2... Clear all data    
 ::    echo    3... SpeedMode         [ %speedMode% ]
@@ -542,15 +542,15 @@ title TicTacToe game
         goto settings
     ) else if "%idS%"=="2" (
         cls
-        type settings.txt
+        type graphics\settings.txt
         echo Clearing all data...
         timeout /t 1 /nobreak > nul
-        del settingsInt.txt
-        echo botDificulty=1 > settingsInt.txt
-        echo speedMode=off>> settingsInt.txt
-        echo color=7 >> settingsInt.txt
+        del settings\settingsInt.txt
+        echo botDificulty=1 > settings\settingsInt.txt
+        echo speedMode=off>> settings\settingsInt.txt
+        echo color=7 >> settings\settingsInt.txt
         cls
-        type settings.txt
+        type graphics\settings.txt
         echo Data cleared, settings reset!
         timeout /t 1 /nobreak > nul
         call :settingsInt
@@ -570,7 +570,7 @@ title TicTacToe game
     )
 :settingsInt
     :: set variables from settingsInt.txt in format variable=value
-    for /f "tokens=1,2 delims== " %%a in (settingsInt.txt) do set %%a=%%b
+    for /f "tokens=1,2 delims== " %%a in (settings\settingsInt.txt) do set %%a=%%b
     echo %botDificulty%
     echo %speedMode%
     echo %color%
