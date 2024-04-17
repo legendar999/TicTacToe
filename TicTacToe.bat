@@ -24,6 +24,7 @@ title TicTacToe game
     if "%idM%"=="1" (
         cls
         type graphics\instructions.txt
+        pause
     ) else if "%idM%"=="2" (
         cls
         goto StartGame
@@ -33,6 +34,7 @@ title TicTacToe game
     ) else if "%idM%"=="4" (
         cls
         type graphics\aboutus.txt
+        pause
     ) else (
         echo "Number is invalid, try again!"
         pause
