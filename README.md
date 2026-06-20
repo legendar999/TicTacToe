@@ -13,7 +13,7 @@ Made by **Andriy Gryban**
   - **Player vs Player** — two players on the same keyboard
 - 🤖 **Two bot difficulty levels**
   - **Level 1** — random moves
-  - **Level 2** — smart logic that tries to win and blocks your winning moves
+  - **Level 2** — a simple algorithm that tries to win and blocks your winning moves
 - 🎨 **Colour themes** — cycle through different console colour schemes
 - ⚙️ **Settings menu** — change bot difficulty, switch colour theme, or reset all data
 - 💾 **Persistent settings** — your preferences are saved between sessions in `settings/settingsInt.txt`
