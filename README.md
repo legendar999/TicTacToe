@@ -2,7 +2,7 @@
 
 A complete **Tic-Tac-Toe** game written entirely in **Windows Batch script** (`.bat`) — no installation, no dependencies. Just double-click and play right inside the Command Prompt, with ASCII-art graphics and a colourful interface.
 
-Made by **Andriy Gryban** — [gribanica.me](https://gribanica.me)
+Made by **Andriy Gryban**
 
 ---
 
@@ -70,11 +70,9 @@ TicTacToe/
 
 ---
 
-## Credits & License
+## Credits
 
 Created by **Andriy Gryban** on 15 April 2024.
-
-Copying this code is allowed, **but you must give credit** by linking to [gribanica.me](https://gribanica.me).
 
 > Written with the help of GitHub Copilot (for faster writing) and StackOverflow (for solving problems).
 
